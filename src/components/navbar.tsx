@@ -1,5 +1,3 @@
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { useTheme } from '@/components/theme-provider'
@@ -11,20 +9,6 @@ import { ThemeToggle } from './theme-toggle'
 export function Navbar() {
   const { theme } = useTheme()
   const Logo = theme === 'light' ? LogoDark : LogoLight
-
-  const [searchQuery, setSearchQuery] = useState('')
-
-  const handleSearchInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
-    setSearchQuery(event.target.value)
-  }
-
-  const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    // Implement your search logic here, e.g., redirect to search results page
-    console.log('Searching for:', searchQuery)
-  }
 
   return (
     <nav className="bg-white dark:bg-gray-800 shadow-lg">
@@ -55,7 +39,7 @@ export function Navbar() {
               </Link>
             </div>
           </div>
-          <form
+          {/* <form
             onSubmit={handleSearchSubmit}
             className="flex items-center ml-4"
           >
@@ -68,14 +52,13 @@ export function Navbar() {
                 className="px-4 py-2 border rounded-md text-sm dark:bg-gray-700 dark:text-white"
               />
             </div>
-            {/* Substitua o botão pelo ícone de pesquisa */}
             <button
               type="submit"
               className="bg-transparent border-none outline-none p-2"
             >
               <MagnifyingGlassIcon className="h-6 w-6 text-gray-400 dark:text-gray-200" />
             </button>
-          </form>
+          </form> */}
           <ThemeToggle />
         </div>
       </div>
