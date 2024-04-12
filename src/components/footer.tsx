@@ -31,7 +31,7 @@ export function Footer() {
               Privacidade
             </Link>
             <Link
-              to="/contact"
+              to="https://github.com/AlphaJR36"
               className="text-gray-400 hover:text-white px-3 py-2"
             >
               Contato
